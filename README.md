@@ -10,8 +10,6 @@ Android Studio's new project with a blank activity template.
 
 Repositories yet to be written (each build will build on the previous)
 
-TBD:  HGBExample2:  Will draw the hive; but do little else
-
 TBD:  HGBExample3:  Will translate the hive and change cell size (via a menu pick)
 
 TBD:  HGBExample4:  Will locate a cell and fill it with a color
