@@ -60,6 +60,6 @@ public class MainActivity extends AppCompatActivity
       //       cell 0 origin:  [0] = 350.0, [1] = 450.0
       // (cellIndex == 0 is the hive origin -- the center cell)
 
-      // See HGBBasics2 to for the more complex Android code to draw the hive
+      // See HGBExample2 to for a more complex Android code to draw the hive
    }
 }
