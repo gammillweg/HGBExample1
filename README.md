@@ -4,6 +4,10 @@ HGBExample1:  Basic Example of how to create a hive with HGB classes
 This is a useless example.  BUT it demonstrates how easily, in just a
 few lines one can create a HGB hive.  All the the hexagon data exists,
 it is not drawn and thus is not visible.
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 
 
 All the work, what little there is of it, is found in the main Activity.
