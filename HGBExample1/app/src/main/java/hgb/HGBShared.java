@@ -9,13 +9,13 @@ import java.util.Arrays;
 // sudo Singleton :-) )
 
 // This class is meant to me create ONCE and only ONCE in the main Activity (or other higher
-// method and passed on down through parameters; such that only this ONE class is used.
+// method and passed on down through parameters; such that only this ONE and ONLY ONE instance exists.
 // It is a common access storage location.  Many classes store their results here to be
 // accessed as needed by other classes without access to the worker class.
 
 public class HGBShared
 {
- 	public HGBShared()
+	public HGBShared()
 	{
 		baseVertices = new float [HGBShared.SIDES][];
 		basePetalOrigins = new float[HGBShared.SIDES][];
@@ -25,8 +25,7 @@ public class HGBShared
 		////--arrayMgr = new HGBArrayMgr(this);
 		hgbAllocateCellAry = new HGBAllocateCellAry(this);
 	}
-   //----------------------------------------------------
-
+	
 	//private final String TAG = "TAG_Shared";
 	private HGBAllocateCellAry hgbAllocateCellAry = null;
 	
@@ -97,7 +96,7 @@ public class HGBShared
       return hgbUtils;
    }
 
-	private HGBLocator hgbLocator = null;
+	private  HGBLocator hgbLocator = null;
 	public void setHGBLocator(HGBLocator hgbLocator)
 	{
 		this.hgbLocator = hgbLocator;
@@ -111,7 +110,7 @@ public class HGBShared
 	// When filled with instances of CellPack, there are wasted members
 	// in the array.  Each Rose contains 7 hexagons (cells) (The center 
 	// and 6 petals); but roses increment by 10's.  Hence, indices 0, 1-6 
-	// are filled with instances of BondPacks and 7,8 and 9 are left null.)
+	// are filled with instances of CellPacks and 7,8 and 9 are left null.)
 	
 	protected HGBCellPack[] cellAry = null;
 	
@@ -119,7 +118,7 @@ public class HGBShared
 	public int getCellAryLen() { return cellAry.length; }
 
    // if cellIndex == -1 return null;
-	public HGBCellPack getCellPack(int cellIndex)
+	public HGBCellPack getCellPack(int cellIndex) 
 	{
 		////--if (cellIndex > cellAryLen ) { cellIndex = cellAryLen; }
 		if (cellIndex > cellAry.length ) { cellIndex = cellAry.length; }
@@ -170,7 +169,7 @@ public class HGBShared
       this.cellIndices = Arrays.copyOf(cellIndices, cellIndices.length);
    }
    public int[] getCellIndices() { return cellIndices; }
-
+	
 	//-------------------------------------------------------------
 	// vertexRadians0, vertexRaians90, normalRadians0 and normalRadians90
 	// defined as public static final double[] in HexStatic.  As the
